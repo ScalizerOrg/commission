@@ -98,6 +98,7 @@
                                 options="{'no_create': True, 'no_open': 1}"
                             />
                             <field name="applied_on" widget="radio" />
+                            <field name="based_on" invisible="1" /> <!-- used in child views -->
                             <field
                                 name="categ_id"
                                 invisible="applied_on != '2_product_category'"
