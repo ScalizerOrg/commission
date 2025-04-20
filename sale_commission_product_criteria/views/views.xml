@@ -51,10 +51,8 @@
                         colspan="2"
                     >
                         <list>
-                            <field name="sequence" invisible="1" />
                             <field name="name" string="Applied On" />
                             <field name="commission_value" />
-                            <field name="based_on" invisible="1" />
                         </list>
                     </field>
                 </group>
@@ -72,15 +70,11 @@
                 <attribute name="invisible">1</attribute>
             </field>
             <field name="amount" position="before">
-                <field name="applied_on_name" string="Applied On" invisible="1" />
                 <field name="based_on" string="Based On" invisible="1" />
-                <field name="commission_type" string="Price Type" invisible="1" />
                 <field name="fixed_amount" string="Amount (fixed)" invisible="1" />
-                <field name="percent_amount" string="Amount (%)" invisible="1" />
                 <field name="discount" string="Applied Disc. (%)" invisible="1" />
             </field>
             <field name="amount" position="replace">
-                <field name="applied_commission_id" invisible="1" />
                 <field name="amount" string="Final Amount" />
             </field>
         </field>
@@ -98,14 +92,12 @@
                     </h1>
                     <group>
                         <group name="pricelist_rule_target">
-                            <field name="company_id" invisible="1" />
                             <field
                                 name="commission_id"
                                 invisible="context.get('hide_commission_id')"
                                 options="{'no_create': True, 'no_open': 1}"
                             />
                             <field name="applied_on" widget="radio" />
-                            <field name="based_on" invisible="1" />
                             <field
                                 name="categ_id"
                                 invisible="applied_on != '2_product_category'"
