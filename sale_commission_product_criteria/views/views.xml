@@ -69,11 +69,6 @@
             <field name="commission_id" position="attributes">
                 <attribute name="invisible">1</attribute>
             </field>
-            <field name="amount" position="before">
-                <field name="based_on" string="Based On" invisible="1" />
-                <field name="fixed_amount" string="Amount (fixed)" invisible="1" />
-                <field name="discount" string="Applied Disc. (%)" invisible="1" />
-            </field>
             <field name="amount" position="replace">
                 <field name="amount" string="Final Amount" />
             </field>
